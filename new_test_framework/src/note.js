@@ -1,6 +1,6 @@
-function Note (text) {
+function Note () {
  this._title = "New Note";
- this._text = text;
+ this._text = "";
 }
 
 Note.prototype.addText = function (text){
