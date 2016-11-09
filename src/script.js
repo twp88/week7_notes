@@ -16,8 +16,7 @@ function addToList(note){
   note.addText(document.getElementById("textbox").value);
   notes.addToList(note);
   var newdiv = document.createElement('div');
-      newdiv.innerHTML = note._title + " <p id="+c+"> Hello </p>";
-      newdiv.innerHTML = "<li><a href="+"#"+c+">"+ note._title + "</a></li>";
+      newdiv.innerHTML = "<li><a href=" + "#" + c + " id="+c+">"+ note._title + "</a></li>";
       document.getElementById("new-link").appendChild(newdiv);
       c++;
     }
