@@ -4,39 +4,13 @@
     <meta charset="utf-8">
     <title>Frontend, single page app</title>
     <script src="src/note.js"></script>
+
   </head>
   <body>
     Notes:
 
-    <button class="button" id="note-add">Add Note</button>
 
-    <input type="text" id="textbox" name="textbox">
-    <div id="new-link"></div>
-    <div id="new-note"></div>
+    <script src="src/script.js"></script>
 
-    <script>
-    var c = 0;
-    function addToList(note){
-      var newdiv = document.createElement('div');
-          newdiv.innerHTML = note._title + " <p id="+c+"> Hello </p>";
-          newdiv.innerHTML = "<a href="+"#"+c+">"+ note._title + "</a>";
-          document.getElementById("new-link").appendChild(newdiv);
-          c++;
-        }
-
-    function addToNotes(note){
-      var newdiv = document.createElement('div');
-          note.addText(document.getElementById("textbox").value);
-          newdiv.innerHTML = "<h1 id="+c+">" + note._text + "</h1>";
-          document.getElementById("new-note").appendChild(newdiv);
-        }
-
-    document.getElementById("note-add").addEventListener("click", function(e){ ///e
-      var note = new Note();
-      addToNotes(note);
-      addToList(note);
-      e.preventDefault();
-      })
-    </script>
   </body>
 </html>
